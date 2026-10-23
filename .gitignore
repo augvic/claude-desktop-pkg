@@ -1,4 +1,4 @@
-# Artefatos baixados e gerados (grandes, binários, reproduzíveis)
+# Downloaded and built artifacts (large, binary, reproducible)
 *.deb
 *.pkg.tar.*
 src/

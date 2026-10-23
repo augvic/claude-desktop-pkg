@@ -1,3 +1,3 @@
 post_install() {
-  echo ">> Cowork: instale qemu-system-x86 edk2-ovmf virtiofsd e adicione seu usuário ao grupo kvm."
+  echo ">> Cowork: install qemu-system-x86 edk2-ovmf virtiofsd and add your user to the kvm group."
 }

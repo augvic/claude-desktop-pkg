@@ -1,37 +1,38 @@
-# claude-desktop-pkg
+# 🤖 claude-desktop-pkg
 
-Empacota o Claude Desktop para Arch Linux a partir do `.deb` oficial da Anthropic
-(Linux beta, publicado em `downloads.claude.ai`).
+📦 Packages **Claude Desktop** for 🐧 **Arch Linux** from Anthropic's official `.deb`
+(Linux beta, published at `downloads.claude.ai`).
 
-O Arch não é oficialmente suportado pela Anthropic: o app é feito para Debian/Ubuntu.
-Este PKGBUILD apenas reempacota os binários oficiais, sem alterá-los.
+> ⚠️ Arch is not officially supported by Anthropic: the app targets Debian/Ubuntu.
+> This PKGBUILD only repackages the official binaries, without modifying them.
 
-## Uso
+## 🚀 Usage
 
 ```bash
-./atualizar.sh
+./update.sh
 ```
 
-O script:
+The script:
 
-1. baixa a chave de assinatura e confere o fingerprint `31DDDE24DDFAB679F42D7BD2BAA929FF1A7ECACE`;
-2. verifica a assinatura do `InRelease` do repositório apt oficial;
-3. confere os hashes em cadeia (`InRelease` → `Packages` → `.deb`);
-4. atualiza `pkgver` e `sha256sums` no `PKGBUILD`;
-5. roda `makepkg` e instala com `sudo pacman -U`.
+1. 🔑 downloads the signing key and checks the fingerprint `31DDDE24DDFAB679F42D7BD2BAA929FF1A7ECACE`;
+2. ✍️ verifies the signature of the official apt repository's `InRelease`;
+3. 🔗 checks the hash chain (`InRelease` → `Packages` → `.deb`);
+4. 📝 updates `pkgver` and `sha256sums` in the `PKGBUILD`;
+5. 🛠️ runs `makepkg` and installs with `sudo pacman -U`.
 
-Se já estiver na versão mais recente, não faz nada (use `--force` para reconstruir).
-Rode num terminal interativo, pois o `sudo` precisa pedir a senha.
+✅ If you are already on the latest version, it does nothing (use `--force` to rebuild).
 
-## Arquivos
+💡 Run it from an interactive terminal, since `sudo` needs to ask for your password.
 
-- `PKGBUILD`: extrai o `.deb` e instala os arquivos, reproduzindo o que o `postinst`
-  do Debian faria (busca do GNOME, tipos MIME, link `ccd`), sem o repositório apt
-  e o perfil do AppArmor.
-- `claude-desktop.install`: mensagem pós-instalação.
-- `atualizar.sh`: download verificado, build e instalação.
+## 📁 Files
 
-## Cowork (opcional)
+- 📄 `PKGBUILD`: extracts the `.deb` and installs its files, reproducing what the Debian
+  `postinst` would do (GNOME search provider, MIME types, `ccd` link), without the apt
+  repository and the AppArmor profile.
+- 💬 `claude-desktop.install`: post-install message.
+- 🔄 `update.sh`: verified download, build and install.
+
+## 🖥️ Cowork (optional)
 
 ```bash
 sudo pacman -S qemu-system-x86 edk2-ovmf virtiofsd
@@ -41,9 +42,9 @@ sudo pacman -S qemu-system-x86 edk2-ovmf virtiofsd
 sudo usermod -aG kvm $USER
 ```
 
-Depois saia e entre de novo na sessão.
+🔁 Then log out and back in.
 
-## Remover
+## 🗑️ Uninstall
 
 ```bash
 sudo pacman -R claude-desktop
