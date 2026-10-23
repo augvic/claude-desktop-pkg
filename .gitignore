@@ -1,0 +1,5 @@
+# Artefatos baixados e gerados (grandes, binários, reproduzíveis)
+*.deb
+*.pkg.tar.*
+src/
+pkg/
