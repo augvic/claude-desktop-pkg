@@ -1,6 +1,6 @@
 # Repackaging of Anthropic's official Claude Desktop .deb (Linux beta)
 pkgname=claude-desktop
-pkgver=3.6556.2
+pkgver=4.23118.0
 pkgrel=1
 pkgdesc="Desktop application for Claude.ai (official Anthropic .deb, repackaged)"
 arch=('x86_64')
@@ -15,7 +15,7 @@ optdepends=('libayatana-appindicator: tray icon'
 options=('!strip' '!debug')
 install=claude-desktop.install
 source=("claude-desktop_${pkgver}_amd64.deb")
-sha256sums=('0f6ed1f2845c30419b8545a8320676d7464a19f625e05e02919238aa6978ecb4')
+sha256sums=('1ad996e8caab05c9b374646051c40cb6bb9d84f371756f15b8d3728897515a97')
 noextract=("claude-desktop_${pkgver}_amd64.deb")
 
 package() {
