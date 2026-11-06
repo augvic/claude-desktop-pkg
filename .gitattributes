@@ -1,0 +1,4 @@
+* linguist-detectable=false
+*.sh linguist-detectable=true
+PKGBUILD linguist-detectable=true
+*.install linguist-detectable=true
